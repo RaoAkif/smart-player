@@ -35,6 +35,16 @@ export const eventsApiSlice = apiSlice.injectEndpoints({
         body: { ...event },
       }),
     }),
+    updatePlayerAvailabilityInAnEvent: builder.mutation({
+      query: ({ eventId, playerId, availability_status }) => ({
+        url: `/events/${eventId}/players/${playerId}/availability`,
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: { availability_status },
+      }),
+    }),
     deleteEvent: builder.mutation({
       query: (id) => ({
         url: `/events/${id}`,
@@ -52,5 +62,6 @@ export const {
   useGetEventsQuery,
   useAddEventMutation,
   useEditEventMutation,
+  useUpdatePlayerAvailabilityInAnEventMutation,
   useDeleteEventMutation
 } = eventsApiSlice;
