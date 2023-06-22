@@ -1,9 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
 import Public from './components/authComponents/Public'
 import Login from './features/auth/Login';
+import Layout from './components/Layout'
 import DashLayout from './components/dashComponents/DashLayout'
-import Home from './features/auth/Home'
 import Events from './features/events/Events'
 import EventDetails from './features/events/EventDetails'
 import { store } from './redux/store'
@@ -18,8 +17,6 @@ function App() {
           <Route path="login" element={<Login />} />
 
           <Route path="dashboard" element={<DashLayout />}>
-
-            <Route index element={<Home />} />
 
             <Route path="events">
               <Route index element={<Events />} />
