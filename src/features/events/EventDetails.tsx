@@ -1,10 +1,30 @@
 import { useParams } from "react-router-dom";
-import { useGetEventsWithPlayersQuery } from "./eventsApiSlice";
+import { useGetEventsWithPlayersQuery, useUpdatePlayerAvailabilityInAnEventMutation } from "./eventsApiSlice";
 
 const EventDetails = () => {
   const { eventId } = useParams();
   const { data: event, isLoading, isError } = useGetEventsWithPlayersQuery(eventId);
   const accessToken = localStorage.getItem("accessToken");
+  const userId = localStorage.getItem("userId");
+  const [updateAvailabilityStatus] = useUpdatePlayerAvailabilityInAnEventMutation();
+
+  const handleJoinEvent = async () => {
+    try {
+      await updateAvailabilityStatus({ eventId, playerId: userId, availability_status: "GOING" });
+      // Handle success or perform any additional actions
+    } catch (error) {
+      // Handle error
+    }
+  };
+
+  const handleDeclineEvent = async () => {
+    try {
+      await updateAvailabilityStatus({ eventId, playerId: userId, availability_status: "NOT_GOING" });
+      // Handle success or perform any additional actions
+    } catch (error) {
+      // Handle error
+    }
+  };
 
   if (isLoading) {
     return <div>Loading event details...</div>;
@@ -36,26 +56,24 @@ const EventDetails = () => {
         <p className="mb-1 text-lg font-bold">Description</p>
         <p className="mb-3 text-base">{event.details}</p>
       </div>
-      {accessToken
-        ?
-        <div className="mx-5 p-3 rounded-md mt-5" style={{border: '1px solid #e5e7eb'}}>
+
+      {accessToken && (
+        <div className="mx-5 p-3 rounded-md mt-5" style={{ border: '1px solid #e5e7eb' }}>
           <p className="text-lg font-bold mb-5 text-center">
             Will you join the event?
           </p>
-          <div className="py-2 px-4 bg-blue-700 rounded-md mr-2 mb-3">
+          <div className="py-2 px-4 bg-blue-700 rounded-md mr-2 mb-3" onClick={handleJoinEvent}>
             <p className="font-bold text-sm text-white hover:underline text-center">
               Join event
             </p>
           </div>
-          <div className="py-2 px-4 rounded-md mr-2" style={{border: '1px solid #FFCACA'}}>
+          <div className="py-2 px-4 rounded-md mr-2" style={{ border: '1px solid #FFCACA' }} onClick={handleDeclineEvent}>
             <p className="font-bold text-sm text-red-700 hover:underline text-center">
-                Decline event
+              Decline event
             </p>
           </div>
         </div>
-        :
-        <></>
-        }
+      )}
     </div>
   );
 };
