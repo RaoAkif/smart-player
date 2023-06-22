@@ -22,7 +22,7 @@ const EventDetails = () => {
       <h1 className="pt-3 pl-5 font-bold text-lg mb-3 pb-3 text-left pr-10" style={{borderBottom: '1px solid #e5e7eb'}}>Event Overview</h1>
       <div className="mx-5 p-3 rounded-lg" style={{border: '1px solid #e5e7eb'}}>
         <h2 className="mb-3 text-3xl font-bold">{event.title}</h2>
-        <p className="mb-3 text-xl font-bold">About this Event</p>
+        <p className="mb-3 text-2xl font-bold">About this Event</p>
         <p className="mb-1 text-base font-bold">Category</p>
         <p className="mb-3 text-base">{event.event_type}</p>
         <p className="mb-1 text-base font-bold">Date & Time:</p>
@@ -31,7 +31,7 @@ const EventDetails = () => {
         <p className="mb-3 text-base">{event.end_time} - {event.start_time} hour/s</p>
         <p className="mb-1 text-base font-bold">Location:</p>
         <p className="mb-5 text-base">{event.location}</p>
-        <p className="mb-2 text-xl font-bold">Details</p>
+        <p className="mb-2 text-2xl font-bold">Details</p>
         <p className="mb-1 text-lg font-bold">Description</p>
         <p className="mb-3 text-base">{event.details}</p>
       </div>
