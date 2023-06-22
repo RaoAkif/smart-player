@@ -22,7 +22,7 @@ const LoginForm = () => {
           // Save the access token in LocalStorage
           localStorage.setItem("accessToken", accessToken);
           // Redirect or perform other actions
-          navigate("/dashboard");
+          navigate("/dashboard/events");
           // Redirect or perform other actions
           console.log("Login successful");
         })
@@ -36,7 +36,7 @@ const LoginForm = () => {
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
     if (accessToken) {
-      navigate("/dashboard");
+      navigate("/dashboard/events");
     }
   }, [navigate]);
 
@@ -44,14 +44,14 @@ const LoginForm = () => {
     <div className="flex flex-col items-center mt-52">
       <Logo />
 
-      <h1 className="text-4xl font-black text-black mt-8">
+      <h1 className="text-4xl font-black text-black mt-8 text-center">
         Log in to your account
       </h1>
       <p className="text-base text-gray-600 mt-2">
-        Welcome coach! Please enter your details.
+        Welcome player! Please enter your details.
       </p>
 
-      <form className="mt-8 w-64 lg:w-96" onSubmit={handleSubmit}>
+      <form className="mt-8 w-10/12 lg:w-10/12" onSubmit={handleSubmit}>
         <div className="relative border border-solid border-gray-300 rounded-xl p-2">
           <div className="h-1/2 border-gray-300"></div>
           <input
@@ -84,8 +84,8 @@ const LoginForm = () => {
       <p className="text-blue-700 text-sm mt-2">Forgot password</p>
       <p className="text-gray-600 text-sm mt-2">
         Not yet registered?{" "}
-        <a href="./register" className="text-blue-700">
-          Register here
+        <a href="./login" className="text-blue-700">
+          Contact you coach
         </a>
       </p>
     </div>
