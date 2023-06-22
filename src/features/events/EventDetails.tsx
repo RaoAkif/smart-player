@@ -1,14 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetEventsWithPlayersQuery } from "./eventsApiSlice";
 
-type PlayerAvailabilityTypes = "PENDING" | "GOING" | "NOT_GOING";
-
-interface Player {
-  id: number;
-  name: string;
-  availability_status: PlayerAvailabilityTypes
-}
-
 const EventDetails = () => {
   const { eventId } = useParams();
   const { data: event, isLoading, isError } = useGetEventsWithPlayersQuery(eventId);
@@ -27,30 +19,37 @@ const EventDetails = () => {
 
   return (
     <div>
-      <h1 className="pt-3 pl-10 font-bold text-lg mb-3 pb-3 text-left pr-10" style={{borderBottom: '1px solid #e5e7eb'}}>Events</h1>
-      <h2>Event Details</h2>
-      <p>Event ID: {eventId}</p>
-      <p>Title: {event.title}</p>
-      <p>Date: {event.date}</p>
-      <p>Date: {event.date}</p>
-      <p>Start Time: {event.start_time}</p>
-      <p>End Time: {event.end_time}</p>
-      <p>Location: {event.location}</p>
-      <p>Details: {event.details}</p>
-      <p>Team: {event.team.name}</p>
-      <p>Players:</p>
-      <ul>
-        {event.team.players.map((player: Player) => (
-          <li key={player.id}>
-            <div>
-              {player.name}
-            </div>
-            <div>
-              {player.availability_status}
-            </div>
-          </li>
-        ))}
-      </ul>
+      <h1 className="pt-3 pl-5 font-bold text-lg mb-3 pb-3 text-left pr-10" style={{borderBottom: '1px solid #e5e7eb'}}>Event Overview</h1>
+      <div className="mx-5 p-3 rounded-lg" style={{border: '1px solid #e5e7eb'}}>
+        <h2 className="mb-3 text-3xl font-bold">{event.title}</h2>
+        <p className="mb-3 text-xl font-bold">About this Event</p>
+        <p className="mb-1 text-base font-bold">Category</p>
+        <p className="mb-3 text-base">{event.event_type}</p>
+        <p className="mb-1 text-base font-bold">Date & Time:</p>
+        <p className="mb-3 text-base">{event.date}, {event.end_time} - {event.start_time}</p>
+        <p className="mb-1 text-base font-bold">Duration:</p>
+        <p className="mb-3 text-base">{event.end_time} - {event.start_time} hour/s</p>
+        <p className="mb-1 text-base font-bold">Location:</p>
+        <p className="mb-5 text-base">{event.location}</p>
+        <p className="mb-2 text-xl font-bold">Details</p>
+        <p className="mb-1 text-lg font-bold">Description</p>
+        <p className="mb-3 text-base">{event.details}</p>
+      </div>
+      <div className="mx-5 p-3 rounded-md mt-5" style={{border: '1px solid #e5e7eb'}}>
+        <p className="text-lg font-bold mb-5 text-center">
+          Will you join the event?
+        </p>
+        <div className="py-2 px-4 bg-blue-700 rounded-md mr-2 mb-3">
+          <p className="font-bold text-sm text-white hover:underline text-center">
+            Join event
+          </p>
+        </div>
+        <div className="py-2 px-4 rounded-md mr-2" style={{border: '1px solid #FFCACA'}}>
+          <p className="font-bold text-sm text-red-700 hover:underline text-center">
+              Decline event
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
