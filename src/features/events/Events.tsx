@@ -28,7 +28,7 @@ const Events = () => {
   return (
     <>
       <h1 className="pt-3 pl-10 font-bold text-lg -mb-6 pb-3 text-center pr-10" style={{borderBottom: '1px solid #e5e7eb'}}>Events</h1>
-      <div className='bg-white rounded-sm border border-solid border-gray-300 m-10 pb-2 ml-5 mr-4'>
+      <div className='rounded-xl border border-solid border-gray-300 m-10 pb-3 ml-5 mr-4 pt-3 bg-gray-100'>
         <div>
           <table className='w-full'>
             <thead className='h-11 bg-gray-100'>
