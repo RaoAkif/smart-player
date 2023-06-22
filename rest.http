@@ -200,7 +200,7 @@ Content-Type: application/json
 DELETE https://smart-coach-api.vercel.app/api/events/:id
 
 ### Get an event with all players
-GET https://smart-coach-api.vercel.app/api/events/2/players
+GET https://smart-coach-api.vercel.app/api/events/1/players
 
 
 # GET https://smart-coach-api.vercel.app/api/events/:id/players/:playerId/availability
