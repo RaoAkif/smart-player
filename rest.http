@@ -1,0 +1,220 @@
+// -------- START COACHES REQUESTS -------- //
+### REGISTER A COACH
+POST https://smart-coach-api.vercel.app/api/coaches/register
+Content-Type: application/json
+
+{
+  "name": "Coach 01",
+  "username": "coach01",
+  "email": "coach01@gmail.com",
+  "password": "123456"
+}
+
+### LOGIN COACH
+POST https://smart-coach-api.vercel.app/api/auth/coach/login
+Content-Type: application/json
+
+{
+  "username": "coach01",
+  "password": "123456"
+}
+
+### LOGIN PLAYER
+POST https://smart-coach-api.vercel.app/api/auth/player/login
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "password": "7J$11^xA"
+}
+
+### GET ALL COACHES
+GET https://smart-coach-api.vercel.app/api/coaches
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+### GET COACH BY ID
+GET https://smart-coach-api.vercel.app/api/coaches/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+### EDIT COACH
+PUT https://smart-coach-api.vercel.app/api/coaches/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+{
+  "name": "Coach 01",
+  "username": "coach01",
+  "email": "coach01@gmail.com",
+  "password": "123456"
+}
+
+### DELETE A COACH
+DELETE https://smart-coach-api.vercel.app/api/coaches/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+// -------- END COACHES REQUESTS -------- //
+
+# ---------------------------------------------------------
+
+// -------- START PLAYER REQUESTS -------- //
+
+### Create a new Player
+POST https://smart-coach-api.vercel.app/api/players
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+# {
+#   "name": "John Doe",
+#   "username": "johndoe",
+#   "email": "johndoe@gmail.com",
+#   "number": "+923330508717",
+#   "position": "GOAL_KEEPER",
+#   "availability_status": "PENDING"
+# }
+
+{
+  "name": "Jenny Doe",
+  "username": "jennydoe",
+  "email": "jennydoe@gmail.com",
+  "number": "+923330508717",
+  "position": "FULL_BACK_RIGHT",
+  "availability_status": "PENDING"
+}
+
+
+### Get all players
+GET https://smart-coach-api.vercel.app/api/players
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+### Get a player by ID
+GET https://smart-coach-api.vercel.app/api/players/:id
+
+### Update a player
+PUT https://smart-coach-api.vercel.app/api/players/:id
+Content-Type: application/json
+
+{
+  {
+  "name": "Jenny Doe",
+  "number": "+923216363147"
+}
+}
+
+### Delete a player
+DELETE https://smart-coach-api.vercel.app/api/players/:id
+
+// -------- END PLAYER REQUESTS -------- //
+
+# ---------------------------------------------------------
+
+// -------- START TEAM REQUESTS -------- //
+
+### Create a new Team
+POST https://smart-coach-api.vercel.app/api/teams
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+{
+  "name": "Team 02",
+  "playerIds": [1]
+}
+
+
+### Get all teams
+GET https://smart-coach-api.vercel.app/api/teams
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+
+### Get a team by ID
+GET https://smart-coach-api.vercel.app/api/teams/:id
+
+
+
+### Update a team
+PUT https://smart-coach-api.vercel.app/api/teams/1
+Content-Type: application/json
+
+{
+  "name": "Team 01",
+  "playerIds": [4, 5, 8]
+}
+
+
+### Delete a team
+DELETE https://smart-coach-api.vercel.app/api/teams/:id
+
+
+### Get all players in a team
+# GET https://smart-coach-api.vercel.app/api/teams/:id/players
+GET https://smart-coach-api.vercel.app/api/teams/1/players
+
+
+// -------- END TEAM REQUESTS -------- //
+
+# ---------------------------------------------------------
+
+// -------- START EVENT REQUESTS -------- //
+
+### Create a new Event
+POST https://smart-coach-api.vercel.app/api/events
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MX0sImlhdCI6MTY4NjgxMTM3OCwiZXhwIjoxNjg3NDE2MTc4fQ.8erhupn7NVfkJtwzd26P87ZfopyA1jtsgviCSrbTjrw
+
+{
+  "title": "Final Match",
+  "event_type": "MATCH",
+  "date": "2023-06-13",
+  "start_time": "10:00",
+  "end_time": "12:00",
+  "location": "Match Ground",
+  "details": "Final Match session for upcoming match",
+  "teamId": 3
+}
+
+### Get all events
+GET https://smart-coach-api.vercel.app/api/events
+
+### Get an event by ID
+GET https://smart-coach-api.vercel.app/api/events/1
+
+### Update an event
+PUT https://smart-coach-api.vercel.app/api/events/:id
+Content-Type: application/json
+
+{
+  "title": "Practice Math",
+  "event_type": "PRACTICE",
+  "date": "2023-06-12",
+  "start_time": "10:00",
+  "end_time": "11:00",
+  "location": "Training Ground",
+  "details": "Practice session for upcoming match",
+  "teamId": 1
+}
+
+### Delete an event
+DELETE https://smart-coach-api.vercel.app/api/events/:id
+
+### Get an event with all players
+GET https://smart-coach-api.vercel.app/api/events/2/players
+
+
+# GET https://smart-coach-api.vercel.app/api/events/:id/players/:playerId/availability
+
+### Update the availability status of players in an event
+PUT https://smart-coach-api.vercel.app/api/events/1/players/1/availability
+Content-Type: application/json
+
+{
+  "availability_status": "GOING"
+}
+
+
+# POST https://smart-coach-api.vercel.app/api/events/:eventId/generate-invitation
+### Get an event with all players
+POST https://smart-coach-api.vercel.app/api/events/1/generate-invitation
+
+// -------- END EVENT REQUESTS -------- //
