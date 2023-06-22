@@ -4,6 +4,7 @@ import { useGetEventsWithPlayersQuery } from "./eventsApiSlice";
 const EventDetails = () => {
   const { eventId } = useParams();
   const { data: event, isLoading, isError } = useGetEventsWithPlayersQuery(eventId);
+  const accessToken = localStorage.getItem("accessToken");
 
   if (isLoading) {
     return <div>Loading event details...</div>;
@@ -35,21 +36,26 @@ const EventDetails = () => {
         <p className="mb-1 text-lg font-bold">Description</p>
         <p className="mb-3 text-base">{event.details}</p>
       </div>
-      <div className="mx-5 p-3 rounded-md mt-5" style={{border: '1px solid #e5e7eb'}}>
-        <p className="text-lg font-bold mb-5 text-center">
-          Will you join the event?
-        </p>
-        <div className="py-2 px-4 bg-blue-700 rounded-md mr-2 mb-3">
-          <p className="font-bold text-sm text-white hover:underline text-center">
-            Join event
+      {accessToken
+        ?
+        <div className="mx-5 p-3 rounded-md mt-5" style={{border: '1px solid #e5e7eb'}}>
+          <p className="text-lg font-bold mb-5 text-center">
+            Will you join the event?
           </p>
+          <div className="py-2 px-4 bg-blue-700 rounded-md mr-2 mb-3">
+            <p className="font-bold text-sm text-white hover:underline text-center">
+              Join event
+            </p>
+          </div>
+          <div className="py-2 px-4 rounded-md mr-2" style={{border: '1px solid #FFCACA'}}>
+            <p className="font-bold text-sm text-red-700 hover:underline text-center">
+                Decline event
+            </p>
+          </div>
         </div>
-        <div className="py-2 px-4 rounded-md mr-2" style={{border: '1px solid #FFCACA'}}>
-          <p className="font-bold text-sm text-red-700 hover:underline text-center">
-              Decline event
-          </p>
-        </div>
-      </div>
+        :
+        <></>
+        }
     </div>
   );
 };
