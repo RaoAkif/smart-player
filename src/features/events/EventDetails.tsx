@@ -27,6 +27,7 @@ const EventDetails = () => {
 
   return (
     <div>
+      <h1 className="pt-3 pl-10 font-bold text-lg mb-3 pb-3 text-left pr-10" style={{borderBottom: '1px solid #e5e7eb'}}>Events</h1>
       <h2>Event Details</h2>
       <p>Event ID: {eventId}</p>
       <p>Title: {event.title}</p>
