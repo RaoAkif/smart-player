@@ -1,20 +1,8 @@
-type CreateButtonProps = {
-  text: string;
-};
-
-const CreateButton = ({ text }: CreateButtonProps) => {
+const CreateButton = () => {
   return (
-    <div className="flex items-center py-2 px-4 border-2 border-purple-800 rounded-md">
-      <div className="">
-        <img
-          src="/assets/icons/AddIcon.png"
-          alt="Add Icon"
-          width={12}
-          height={12}
-        />
-      </div>
-      <span className="ml-2 font-bold text-sm text-purple-800 hover:underline">
-        {text}
+    <div className="flex items-center py-2 px-4 border-2 border-blue-700 rounded-md mr-2">
+      <span className="ml-2 font-bold text-blue-700 text-sm border-blue-700 hover:underline">
+        Login
       </span>
     </div>
   );
