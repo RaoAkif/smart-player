@@ -31,17 +31,17 @@ Content-Type: application/json
 ### GET ALL COACHES
 GET https://smart-coach-api.vercel.app/api/coaches
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 ### GET COACH BY ID
 GET https://smart-coach-api.vercel.app/api/coaches/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 ### EDIT COACH
 PUT https://smart-coach-api.vercel.app/api/coaches/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 {
   "name": "Coach 01",
@@ -53,7 +53,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY
 ### DELETE A COACH
 DELETE https://smart-coach-api.vercel.app/api/coaches/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 // -------- END COACHES REQUESTS -------- //
 
 # ---------------------------------------------------------
@@ -63,7 +63,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY
 ### Create a new Player
 POST https://smart-coach-api.vercel.app/api/players
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 # {
 #   "name": "John Doe",
@@ -86,10 +86,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY
 
 ### Get all players
 GET https://smart-coach-api.vercel.app/api/players
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 ### Get a player by ID
-GET https://smart-coach-api.vercel.app/api/players/:id
+GET https://smart-coach-api.vercel.app/api/players/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 ### Update a player
 PUT https://smart-coach-api.vercel.app/api/players/:id
@@ -114,7 +115,7 @@ DELETE https://smart-coach-api.vercel.app/api/players/:id
 ### Create a new Team
 POST https://smart-coach-api.vercel.app/api/teams
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 {
   "name": "Team 02",
@@ -125,7 +126,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY
 ### Get all teams
 GET https://smart-coach-api.vercel.app/api/teams
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 
 ### Get a team by ID
@@ -161,7 +162,7 @@ GET https://smart-coach-api.vercel.app/api/teams/1/players
 ### Create a new Event
 POST https://smart-coach-api.vercel.app/api/events
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDb2FjaEluZm8iOnsiY29hY2hJZCI6MSwidXNlcm5hbWUiOiJjb2FjaDAxIn0sImlhdCI6MTY4NzQ0NDMyMywiZXhwIjoxNjg4MDQ5MTIzfQ.ezhsE3YjR7OXP4hQ3rVy24Ni-cKR0QVoDxNGBcNFhSE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQbGF5ZXJJbmZvIjp7InBsYXllcklkIjoxfSwiaWF0IjoxNjg3NDQ2MzMxLCJleHAiOjE2ODgwNTExMzF9.Qw77TOsk8K2USVtOeM6pmpHY_w3NiQdK86Yj_j9L7-w
 
 {
   "title": "Final Match",
