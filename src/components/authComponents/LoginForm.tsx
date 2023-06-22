@@ -18,9 +18,11 @@ const LoginForm = () => {
       login({ username, password })
         .unwrap()
         .then((response) => {
-          const accessToken = response.accessToken;
+          const accessTokenAndId = response;
           // Save the access token in LocalStorage
-          localStorage.setItem("accessToken", accessToken);
+          console.log(accessTokenAndId);
+          localStorage.setItem("accessToken", accessTokenAndId.accessToken);
+          localStorage.setItem("userId", accessTokenAndId.id);
           // Redirect or perform other actions
           navigate("/dashboard/events");
           // Redirect or perform other actions
