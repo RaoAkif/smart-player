@@ -7,7 +7,7 @@ const Logo = () => {
         width={28}
         height={28}
       />
-      <span className='pl-2 font-semibold text-xl'>Smart Coach</span>
+      <span className='pl-2 font-semibold text-xl'>Smart Player</span>
     </div>
   );
 };
