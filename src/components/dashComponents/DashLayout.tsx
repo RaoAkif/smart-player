@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Logo from '../Logo';
+import CreateButton from '../CreateButton';
 
 const DashLayout = () => {
   const navigate = useNavigate();
@@ -13,9 +14,10 @@ const DashLayout = () => {
   }, [navigate]);
   
   return (
-    <div className="m-auto mr-14 -ml-5">
-      <div className='flex justify-center items-right mt-5 ml-10'>
+    <div className="m-auto">
+      <div className='flex justify-between items-center mt-5 pb-5' style={{borderBottom: '1px solid #e5e7eb'}}>
         <Logo />
+        <CreateButton />
       </div>
       <Outlet />
     </div>
