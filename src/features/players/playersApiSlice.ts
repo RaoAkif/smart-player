@@ -9,6 +9,12 @@ export const playersApiSlice = apiSlice.injectEndpoints({
         params,
       }),
     }),
+    getPlayerById: builder.query({
+      query: (id) => ({
+        url: `/players/${id}`,
+        method: 'GET',
+      }),
+    }),
     addPlayer: builder.mutation({
       query: (player) => ({
         url: "/players",
@@ -43,6 +49,7 @@ export const playersApiSlice = apiSlice.injectEndpoints({
 
 export const {
   useGetPlayersQuery,
+  useGetPlayerByIdQuery,
   useAddPlayerMutation,
   useEditPlayerMutation,
   useDeletePlayerMutation
