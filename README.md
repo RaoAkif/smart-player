@@ -54,9 +54,9 @@ To run the Smart Coach API locally, the following requirements must be met:
 To install and set up Smart Coach locally, follow these steps:
 
 ### Clone
-Clone the Smart Coach repository from [SmartCoach](https://github.com/RaoAkif/smart-coach) with the command:
+Clone the Smart Coach repository from [SmartPlayer](https://github.com/RaoAkif/smart-player) with the command:
 ```
-git clone git@github.com:RaoAkif/smart-coach-api.git
+git clone git@github.com:RaoAkif/smart-player.git
 ```
 ### Setup Environment
 Install `Node.js` from [Node.js website](https://nodejs.org/en/download) and configure it on your system.
@@ -74,7 +74,7 @@ npm run dev
 ```
 
 ### Local Server URL
-Access the Smart Coach Application at
+Access the Smart Player Application at
 ```
 http://localhost:5173/
 ```
