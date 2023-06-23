@@ -210,7 +210,7 @@ PUT https://smart-coach-api.vercel.app/api/events/1/players/1/availability
 Content-Type: application/json
 
 {
-  "availability_status": "GOING"
+  "availability_status": "PENDING"
 }
 
 
